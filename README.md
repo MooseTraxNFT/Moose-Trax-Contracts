@@ -41,7 +41,13 @@ Contracts:
 * [BytesLib.sol](./contracts/BytesLib.sol): A gas-efficient library of byte array utils ([source](https://github.com/GNSPS/solidity-bytes-utils/blob/master/contracts/BytesLib.sol))
 
 About:
-* 
+* Each $FRAME token is a fully mutable and customizable NFT created from metadata stored on-chain
+* Holders can visit the Moose Trax dapp to swap out traits, using their staking rewards from Moose Trax OG as payment
 
 Encoding:
-* 
+* The pixel encoding in this contract is significantly improved compared to Moose Trax OG in both compression and storage
+* Traits are compressed by combining similarly colored pixels places in a row or column using a proprietary compression technique
+  * The encoding is in the following format: `[r or c for row or column][ccc for color][x for x coordinate][y for y coordinate][l for length][xyl][xyl][xyl]|[ccc][xyl]...`
+  * `x`, `y`, and `l` values are stored as a single character using values retrieved from BytesLib
+  * This encoding reduces the encoded string length by up to 90% in some cases
+  * Example: `c2918m09n0am0ao0bn0bp0co0|3146h1`
