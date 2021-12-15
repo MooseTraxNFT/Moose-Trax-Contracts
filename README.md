@@ -6,7 +6,7 @@ There are two main releases:
 1. [Moose Trax](https://opensea.io/collection/moose-trax-nft): A collection of 10,000 unique Moose themed profile pictures. Each NFT has it's metadata stored on-chain. The image is created by decoding this metadata and generating an SVG object.
 1. [CustoMoose](https://opensea.io/collection/moose-trax-customoose): A collection of customizable Moose themed collectibles. Users hand-select traits to add to a $FRAME token.
 
-## Moose Trax ($MOOSE + $TRAX)
+## Moose Trax ([$MOOSE](https://etherscan.io/address/0x3146dd9c200421a9c7d7b67bd1b75ba3e2c15310) + [$TRAX](https://etherscan.io/address/0xc92e730eebaca3d16d6c17f7f4646dce923663e8))
 
 Moose Trax OG is a collection of 10,000 unique and randomly generated on-chain avatars. The contract uses staking and burning mechanics during the mint. The first 2000 Moose cost ETH to mint. The remaining 8000 Moose require an increasing amount of TRAX tokens to mint, or a Moose can be burned to mint another. The burning mechanic allows "re-rolling" for more rare traits as well as reducing overall supply when the mint is complete.
 
@@ -31,7 +31,7 @@ Encoding:
   * Example: `id50jc51je52kc51ke51lc50le50mc50me50nc50ne50oc51oe51pc52pd18pe51qd58`
 * Traits are added to the contract in transactions after deployment of the ERC721 contract
 
-## CustoMoose ($FRAME)
+## CustoMoose ([$FRAME](https://etherscan.io/address/0xc91D89828Cd0d635d0475eC6785c497dC1bF240F))
 
 CustoMoose is a collection of 10,000 customizable FRAME tokens. FRAME tokens are customized with traits using the Moose Trax dapp.
 
