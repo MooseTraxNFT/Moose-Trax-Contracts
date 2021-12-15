@@ -43,6 +43,7 @@ Contracts:
 About:
 * Each $FRAME token is a fully mutable and customizable NFT created from metadata stored on-chain
 * Holders can visit the Moose Trax dapp to swap out traits, using their staking rewards from Moose Trax OG as payment
+* Traits are stored on a contract separate from the ERC721 contract. This allows for future composability, as these encodings can be reused by future contracts
 
 Encoding:
 * The pixel encoding in this contract is significantly improved compared to Moose Trax OG in both compression and storage
