@@ -18,7 +18,8 @@ Contracts:
 About:
 * Moose Trax is a fork of Anonymice's SVG generation and staking contracts using original artwork
 * Each Moose is randomly generated at mint time
-* Each Moose has a unique set of traits
+* Each Moose is made up of 7 visual traits and 1 "burned" trait
+* Each Moose is unique from every other Moose
 * A Moose can be staked on the TRAX ERC20 contract to receive 1 TRAX per day per staked Moose
   * These rewards are used by the CustoMoose collection to pay for minting trait customization
 * Contract supports 8 layers, but can be expanded easily
@@ -28,17 +29,19 @@ Encoding:
   * The encoding is in the following format: `[y for y coordinate][x for x coordinate][cc for color][yxcc][yxcc]...`
   * `x` and `y` values are stored as a single character
   * Example: `id50jc51je52kc51ke51lc50le50mc50me50nc50ne50oc51oe51pc52pd18pe51qd58`
+* Traits are added to the contract in transactions after deployment of the ERC721 contract
 
 ## CustoMoose ($FRAME)
 
 CustoMoose is a collection of 10,000 customizable FRAME tokens. FRAME tokens are customized with traits using the Moose Trax dapp.
 
 Contracts:
-* [TraitLibrary.sol](./contracts/TraitLibrary.sol): This contract simply stores traits and retrieves them. The ERC721 contract will reference this library to 
-* [Customoose.sol](./contracts/Customoose.sol): An ERC721 contract that decodes text strings from TraitLibrary into SVG images on-chain.
+* [TraitLibrary.sol](./contracts/TraitLibrary.sol): This contract simply stores trait prices and encodings, and has functions to retrieve them from storage.
+* [Customoose.sol](./contracts/Customoose.sol): An ERC721 contract that decodes text strings from TraitLibrary into SVG images.
+* [BytesLib.sol](./contracts/BytesLib.sol): A gas-efficient library of byte array utils ([source](https://github.com/GNSPS/solidity-bytes-utils/blob/master/contracts/BytesLib.sol))
 
 About:
-*
+* 
 
 Encoding:
 * 
